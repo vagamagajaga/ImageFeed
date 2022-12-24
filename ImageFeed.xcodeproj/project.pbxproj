@@ -13,7 +13,7 @@
 		CCC161852952310800DF56CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCC161832952310800DF56CD /* Main.storyboard */; };
 		CCC161872952310A00DF56CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCC161862952310A00DF56CD /* Assets.xcassets */; };
 		CCC1618A2952310A00DF56CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCC161882952310A00DF56CD /* LaunchScreen.storyboard */; };
-		CCC161B42954F1BA00DF56CD /* IMLVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC161B32954F1BA00DF56CD /* IMLVC+Extension.swift */; };
+		CCC161B42954F1BA00DF56CD /* ILVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC161B32954F1BA00DF56CD /* ILVC+Extension.swift */; };
 		CCC161B629559DA400DF56CD /* ImagesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC161B529559DA400DF56CD /* ImagesListCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +26,7 @@
 		CCC161862952310A00DF56CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCC161892952310A00DF56CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCC1618B2952310A00DF56CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CCC161B32954F1BA00DF56CD /* IMLVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IMLVC+Extension.swift"; sourceTree = "<group>"; };
+		CCC161B32954F1BA00DF56CD /* ILVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ILVC+Extension.swift"; sourceTree = "<group>"; };
 		CCC161B529559DA400DF56CD /* ImagesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,7 +67,7 @@
 				CCC161882952310A00DF56CD /* LaunchScreen.storyboard */,
 				CCC161862952310A00DF56CD /* Assets.xcassets */,
 				CCC1618B2952310A00DF56CD /* Info.plist */,
-				CCC161B32954F1BA00DF56CD /* IMLVC+Extension.swift */,
+				CCC161B32954F1BA00DF56CD /* ILVC+Extension.swift */,
 			);
 			path = ImageFeed;
 			sourceTree = "<group>";
@@ -156,7 +156,7 @@
 				CCC1617E2952310800DF56CD /* AppDelegate.swift in Sources */,
 				CCC161B629559DA400DF56CD /* ImagesListCell.swift in Sources */,
 				CCC161802952310800DF56CD /* SceneDelegate.swift in Sources */,
-				CCC161B42954F1BA00DF56CD /* IMLVC+Extension.swift in Sources */,
+				CCC161B42954F1BA00DF56CD /* ILVC+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,6 @@ class ImagesListViewController: UIViewController {
 
     let photosName: [String] = Array(0..<20).map{ "\($0)" }
     
-    
     lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .long
