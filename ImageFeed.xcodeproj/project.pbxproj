@@ -74,11 +74,11 @@
 		CCC1617C2952310800DF56CD /* ImageFeed */ = {
 			isa = PBXGroup;
 			children = (
-				CC135872296459DF002F7A1A /* SingleImage */,
-				CCD028E9295DC37800A0F4FB /* Profile */,
-				CCC161B729559DCD00DF56CD /* ImageListCell */,
 				CCC1617D2952310800DF56CD /* AppDelegate.swift */,
 				CCC1617F2952310800DF56CD /* SceneDelegate.swift */,
+				CCD028E9295DC37800A0F4FB /* Profile */,
+				CCC161B729559DCD00DF56CD /* ImageList */,
+				CC135872296459DF002F7A1A /* SingleImage */,
 				CCC161832952310800DF56CD /* Main.storyboard */,
 				CCC161882952310A00DF56CD /* LaunchScreen.storyboard */,
 				CCC161862952310A00DF56CD /* Assets.xcassets */,
@@ -89,13 +89,13 @@
 			path = ImageFeed;
 			sourceTree = "<group>";
 		};
-		CCC161B729559DCD00DF56CD /* ImageListCell */ = {
+		CCC161B729559DCD00DF56CD /* ImageList */ = {
 			isa = PBXGroup;
 			children = (
 				CCC161812952310800DF56CD /* ImagesListViewController.swift */,
 				CCC161B529559DA400DF56CD /* ImagesListCell.swift */,
 			);
-			name = ImageListCell;
+			name = ImageList;
 			sourceTree = "<group>";
 		};
 		CCD028E9295DC37800A0F4FB /* Profile */ = {
