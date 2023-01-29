@@ -9,11 +9,12 @@ import Foundation
 import UIKit
 
 final class SingleImageViewController: UIViewController {
-    var image: UIImage! {
+    var image: UIImage? { //заменил форс анрап
         didSet {
             if isViewLoaded {
-            imageView.image = image
-            rescaleAndCenterImageInScroll(image: image)
+                imageView.image = image
+                guard let image = image else { return } //исправлено после ревью
+                rescaleAndCenterImageInScroll(image: image)
             } else { return }
         }
     }
@@ -27,6 +28,7 @@ final class SingleImageViewController: UIViewController {
         scrollView.minimumZoomScale = 0.1
         scrollView.maximumZoomScale = 1.25
         imageView.image = image
+        guard let image = image else { return } //исправлено после ревью
         rescaleAndCenterImageInScroll(image: image)
     }
     
