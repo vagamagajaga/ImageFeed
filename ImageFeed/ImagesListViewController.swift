@@ -1,9 +1,3 @@
-//
-//  ViewController.swift
-//  ImageFeed
-//
-//  Created by Vagan Galstian on 20.12.2022.
-//
 
 import UIKit
 
@@ -28,8 +22,8 @@ class ImagesListViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == ShowSingleImageSegueIdentifier {
-            let viewController = segue.destination as! SingleImageViewController
-            let indexPath = sender as! IndexPath
+            guard let viewController = segue.destination as? SingleImageViewController else { return }
+            guard let indexPath = sender as? IndexPath else { return }
             let image = UIImage(named: photosName[indexPath.row])
             viewController.image = image
         } else {
