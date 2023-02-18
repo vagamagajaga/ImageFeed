@@ -1,5 +1,3 @@
-
-import Foundation
 import UIKit
 import WebKit
 
@@ -11,8 +9,8 @@ protocol WebViewViewControllerDelegate: AnyObject {
 final class WebViewViewController: UIViewController {
     weak var delegate: WebViewViewControllerDelegate?
         
-    @IBOutlet var webView: WKWebView!
-    @IBOutlet var progressView: UIProgressView!
+    @IBOutlet private var webView: WKWebView!
+    @IBOutlet private var progressView: UIProgressView!
 
     
     override func viewDidLoad() {
@@ -36,7 +34,7 @@ final class WebViewViewController: UIViewController {
         
     }
     
-    @IBAction func didTapBackButton(_ sender: Any) {
+    @IBAction private func didTapBackButton(_ sender: Any) {
         delegate?.webViewViewControllerDidCancel(self)
     }
     

@@ -1,10 +1,10 @@
-
-import Foundation
 import UIKit
 
 final class OAuth2Service {
     static let shared = OAuth2Service()
     private let urlSession = URLSession.shared
+    
+    init() {}
     
     private (set) var authToken: String? {
         get {
@@ -50,29 +50,16 @@ extension OAuth2Service {
     }
     
     private func authTokenRequest(code: String) -> URLRequest? {
-               URLRequest.makeHTTPRequest(
-                    path: "/oauth/token"
-                    + "?client_id=\(accessKey)"
-                    + "&&client_secret=\(secretKey)"
-                    + "&&redirect_uri=\(redirectURI)"
-                    + "&&code=\(code)"
-                    + "&&grant_type=authorization_code",
-                    httpMethod: "POST",
-                    baseURL: URL(string: "https://unsplash.com")!
-                )
-//        let urlString = "https://unsplash.com/oauth/token"
-//        var urlComponents = URLComponents(string: urlString)
-//        urlComponents?.queryItems = [
-//            URLQueryItem (name: "client_id", value: accessKey),
-//            URLQueryItem (name: "client_secret", value: secretKey),
-//            URLQueryItem (name: "redirect_uri", value: redirectURI),
-//            URLQueryItem (name: "code", value: code),
-//            URLQueryItem (name: "grant_type", value: "authorization_code")
-//        ]
-//        guard let url = urlComponents?.url else { return nil }
-//        var request = URLRequest (url: url)
-//        request.httpMethod = "POST"
-       // return request
+        URLRequest.makeHTTPRequest(
+            path: "/oauth/token"
+            + "?client_id=\(accessKey)"
+            + "&&client_secret=\(secretKey)"
+            + "&&redirect_uri=\(redirectURI)"
+            + "&&code=\(code)"
+            + "&&grant_type=authorization_code",
+            httpMethod: "POST",
+            baseURL: URL(string: "https://unsplash.com")!
+        )
     }
     
     private struct OAuthTokenResponseBody: Decodable {
@@ -136,7 +123,6 @@ extension URLSession {
                 fulfillCompletion(.failure(NetworkError.urlSessionError))
             }
         })
-        task.resume()
         return task
     }
 }
