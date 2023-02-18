@@ -1,19 +1,13 @@
-//
-//  SingleImageViewController.swift
-//  ImageFeed
-//
-//  Created by Vagan Galstian on 01.01.2023.
-//
 
 import Foundation
 import UIKit
 
 final class SingleImageViewController: UIViewController {
-    var image: UIImage? { //заменил форс анрап
+    var image: UIImage? {
         didSet {
             if isViewLoaded {
                 imageView.image = image
-                guard let image = image else { return } //исправлено после ревью
+                guard let image = image else { return }
                 rescaleAndCenterImageInScroll(image: image)
             } else { return }
         }
@@ -28,7 +22,7 @@ final class SingleImageViewController: UIViewController {
         scrollView.minimumZoomScale = 0.1
         scrollView.maximumZoomScale = 1.25
         imageView.image = image
-        guard let image = image else { return } //исправлено после ревью
+        guard let image = image else { return } 
         rescaleAndCenterImageInScroll(image: image)
     }
     
@@ -62,3 +56,8 @@ final class SingleImageViewController: UIViewController {
     }
 }
 
+extension SingleImageViewController: UIScrollViewDelegate {
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        imageView
+    }
+}
