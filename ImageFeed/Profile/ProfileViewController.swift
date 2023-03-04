@@ -6,13 +6,32 @@ class ProfileViewController: UIViewController {
     private var nickNameLabel = UILabel()
     private var messageLabel = UILabel()
     private var exitLabelButton = UIButton()
-
+    
+    private let profileService = ProfileService.shared
+    private var token = OAuth2TokenStorage().token
+        
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let token = token else { return }
+        loadProfileData(token: token)
         
         prepareView()
         addSubviews()
         addConstraints()
+    }
+    
+    private func loadProfileData(token: String) {
+        self.profileService.fetchProfile(token) { result in
+            switch result {
+            case .success(let profileResult):
+                let profile = Profile(from: profileResult)
+                self.messageLabel.text = profile.bio ?? ""
+                self.nameLabel.text = profile.name
+                self.nickNameLabel.text = profile.loginName
+            case .failure(let error):
+                print("Error \(error)")
+            }
+        }
     }
     
     private func prepareView() {
@@ -70,6 +89,3 @@ class ProfileViewController: UIViewController {
         ])
     }
 }
-
-
-
