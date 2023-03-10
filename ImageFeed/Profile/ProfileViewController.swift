@@ -14,7 +14,8 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         guard let token = token else { return }
         loadProfileData(token: token)
-        
+        print("Проверяю вывод текста в консоль")
+
         prepareView()
         addSubviews()
         addConstraints()

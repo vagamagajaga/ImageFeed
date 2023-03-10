@@ -22,8 +22,12 @@ final class SingleImageViewController: UIViewController {
         scrollView.minimumZoomScale = 0.1
         scrollView.maximumZoomScale = 1.25
         imageView.image = image
-        guard let image = image else { return } 
-        rescaleAndCenterImageInScroll(image: image)
+//        guard let image = image else { return }
+//        rescaleAndCenterImageInScroll(image: image)
+        if let image = image {
+            rescaleAndCenterImageInScroll(image: image)
+            print("Проверяю вывод текста в консоль")
+        }
     }
     
     @IBAction private func backButton(_ sender: UIButton) {
